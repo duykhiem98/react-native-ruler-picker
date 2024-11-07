@@ -207,9 +207,12 @@ export const RulerPicker = ({
   const renderItem: ListRenderItem<unknown> = useCallback(
     ({ index }) => {
       return (
-        <RulerPickerItem
+        <View>
+      <View style={{backgroundColor:'#cce0ff'}}>
+      <RulerPickerItem
           isLast={index === arrData.length - 1}
           index={index}
+
           shortStepHeight={shortStepHeight}
           longStepHeight={longStepHeight}
           gapBetweenSteps={gapBetweenSteps}
@@ -217,6 +220,11 @@ export const RulerPicker = ({
           shortStepColor={shortStepColor}
           longStepColor={longStepColor}
         />
+      </View>
+
+        <View style={{width:20,height:35,backgroundColor:'#0066ff'}}></View>
+        </View>
+
       );
     },
     [
@@ -267,7 +275,8 @@ export const RulerPicker = ({
   }
 
   return (
-    <View style={{ width, height }}>
+    <View style={{ width, height}}>
+
       <AnimatedFlashList
         ref={listRef}
         data={arrData}
@@ -290,6 +299,7 @@ export const RulerPicker = ({
         showsVerticalScrollIndicator={false}
         horizontal
       />
+
       <View
         pointerEvents="none"
         style={[
@@ -322,7 +332,7 @@ export const RulerPicker = ({
             },
           ]}
         >
-          <TextInput
+          {/* <TextInput
             ref={stepTextRef}
             defaultValue={initialValue.toFixed(fractionDigits)}
             style={[
@@ -333,8 +343,8 @@ export const RulerPicker = ({
               styles.valueText,
               valueTextStyle,
             ]}
-          />
-          {unit && (
+          /> */}
+          {/* {unit && (
             <Text
               style={[
                 {
@@ -347,7 +357,7 @@ export const RulerPicker = ({
             >
               {unit}
             </Text>
-          )}
+          )} */}
         </View>
         <View
           style={[

@@ -65,8 +65,8 @@ export const RulerPickerItem = React.memo(
         style={[
           {
             width: stepWidth,
-            height: '100%',
-            justifyContent: 'center',
+            height: 15,
+            justifyContent: 'flex-start',
             marginRight: isLast ? 0 : gapBetweenSteps,
             marginTop: shortStepHeight,
           },
@@ -78,7 +78,7 @@ export const RulerPickerItem = React.memo(
               width: '100%',
               height: height,
               backgroundColor: isLong ? longStepColor : shortStepColor,
-              marginTop: isLong ? 0 : shortStepHeight,
+              // marginTop: isLong ? 0 : shortStepHeight,
             },
           ]}
         />
