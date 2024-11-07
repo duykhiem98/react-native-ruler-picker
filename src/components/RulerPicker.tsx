@@ -332,7 +332,7 @@ export const RulerPicker = ({
             },
           ]}
         >
-          {/* <TextInput
+        <TextInput
             ref={stepTextRef}
             defaultValue={initialValue.toFixed(fractionDigits)}
             style={[
@@ -343,8 +343,8 @@ export const RulerPicker = ({
               styles.valueText,
               valueTextStyle,
             ]}
-          /> */}
-          {/* {unit && (
+          />
+           {unit && (
             <Text
               style={[
                 {
@@ -355,9 +355,9 @@ export const RulerPicker = ({
                 unitTextStyle,
               ]}
             >
-              {unit}
+              {''}
             </Text>
-          )} */}
+          )}
         </View>
         <View
           style={[
@@ -388,7 +388,7 @@ const styles = StyleSheet.create({
   },
   valueText: {
     color: 'black',
-    fontSize: 32,
+    fontSize: 0,
     fontWeight: '800',
     margin: 0,
     padding: 0,
